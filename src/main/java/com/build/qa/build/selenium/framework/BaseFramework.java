@@ -68,7 +68,7 @@ public abstract class BaseFramework {
 		// Which driver to use? 
 		if (DRIVER_CHROME.equalsIgnoreCase(configuration.getProperty("BROWSER"))){
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-notifications,--privileged");
+			options.addArguments("--disable-notifications");
 			File file = new File("driver/chromedriver.exe");
 			 System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 		
