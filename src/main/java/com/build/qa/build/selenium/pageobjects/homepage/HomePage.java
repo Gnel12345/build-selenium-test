@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
 	private By searchButton;
 	private By bathRooms;
 	private By refrigeration;
+	private By appliancesDropDown;
 		
 	public HomePage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);
@@ -26,7 +27,7 @@ public class HomePage extends BasePage {
 		search = By.cssSelector("#search_txt");
 		searchButton = By.cssSelector("#site-search > div > button");
 		bathRooms = By.cssSelector("#sale-sub-cats-liveitup18 > div:nth-child(1) > div > a");
-		
+		appliancesDropDown = By.linkText("https://www.build.com/appliances/c109152");
 		refrigeration = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > div > div > div.table.mega-categories > a:nth-child(1)");
 	}  
 	
@@ -60,6 +61,12 @@ public class HomePage extends BasePage {
 		return driver.findElement((refrigeration));	
 	    
 		
+		
+	}
+	
+	public void onAppliancesDropDown(){
+		Actions a = new Actions(driver);
+		a.moveToElement(driver.findElement(appliancesDropDown)).build().perform();
 		
 	}
 	

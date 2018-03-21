@@ -217,11 +217,11 @@ public class BuildTest extends BaseFramework {
 		driver.findElement(By.id("yourName")).click();
 		driver.findElement(By.id("yourName")).sendKeys("Glenn");
 		driver.findElement(By.id("yourEmail")).click();
-		driver.findElement(By.id("yourEmail")).sendKeys("gnel12.gn@gmail.com");
+		driver.findElement(By.id("yourEmail")).sendKeys("gnel1234@yahoo.com");
 		driver.findElement(By.id("recipientName")).click();
 		driver.findElement(By.id("recipientName")).sendKeys("Glenn");
 		driver.findElement(By.id("recipientEmail")).click();
-		driver.findElement(By.id("recipientEmail")).sendKeys("gnel12.gn@gmail.com");
+		driver.findElement(By.id("recipientEmail")).sendKeys("gnel1234@yahoo.com");
 		driver.findElement(By.id("quoteMessage")).click();
 		driver.findElement(By.id("quoteMessage")).sendKeys("This is Glenn, sending you a cart from my automation!");
 		driver.findElement(By.cssSelector("#cart-email > div > div > div.modal-body.clearfix.pad-content > div.left.js-email-cart-panel > form > div.col-xs-12 > button")).click();
@@ -237,11 +237,11 @@ public class BuildTest extends BaseFramework {
 		driver.findElement(By.id("yourName")).click();
 		driver.findElement(By.id("yourName")).sendKeys("Glenn");
 		driver.findElement(By.id("yourEmail")).click();
-		driver.findElement(By.id("yourEmail")).sendKeys("gnel12.gn@gmail.com");
+		driver.findElement(By.id("yourEmail")).sendKeys("gnel1234@yahoo.com");
 		driver.findElement(By.id("recipientName")).click();
 		driver.findElement(By.id("recipientName")).sendKeys("Glenn");
 		driver.findElement(By.id("recipientEmail")).click();
-		driver.findElement(By.id("recipientEmail")).sendKeys("gnel12.gn@gmail.com");
+		driver.findElement(By.id("recipientEmail")).sendKeys("gnel1234@yahoo.com");
 		driver.findElement(By.id("quoteMessage")).click();
 		driver.findElement(By.id("quoteMessage")).sendKeys("This is Glenn, sending you a cart from my automation!");
 		driver.findElement(By.cssSelector("#cart-email > div > div > div.modal-body.clearfix.pad-content > div.left.js-email-cart-panel > form > div.col-xs-12 > button")).click();
@@ -284,8 +284,9 @@ public class BuildTest extends BaseFramework {
 		homePage.onCoupon().click();
 		//selects the Appliances dropdown menu	
 		Thread.sleep(300);
-		Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a"))).build().perform();
+		homePage.onAppliancesDropDown();
+		/*Actions a = new Actions(driver);
+		a.moveToElement(driver.findElement(By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a"))).build().perform();*/
 		//selects refrigeration
 		Thread.sleep(300);
 		homePage.onRefrigeration().click();
