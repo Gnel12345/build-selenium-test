@@ -19,7 +19,7 @@ public class AddAdditionalToCartPage extends BasePage {
 	}
 	
 	public WebElement onAddMore() throws InterruptedException{
-		Thread.sleep(300);
+		
 		wait.until(ExpectedConditions.presenceOfElementLocated(AddAdditional));
 		return driver.findElement(AddAdditional);
 		

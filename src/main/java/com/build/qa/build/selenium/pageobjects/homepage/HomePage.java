@@ -26,8 +26,8 @@ public class HomePage extends BasePage {
 		coupon = By.cssSelector("#email-subscribe-splash > div > div > div.modal-header.table.modal-no-title > button > span.close-icon");
 		search = By.cssSelector("#search_txt");
 		searchButton = By.cssSelector("#site-search > div > button");
-		bathRooms = By.cssSelector("#sale-sub-cats-liveitup18 > div:nth-child(1) > div > a");
-		appliancesDropDown = By.linkText("https://www.build.com/appliances/c109152");
+		bathRooms = By.xpath("//*[@id=header]/nav/div/ul/li[2]/a");
+		appliancesDropDown = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a");
 		refrigeration = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > div > div > div.table.mega-categories > a:nth-child(1)");
 	}  
 	
@@ -40,6 +40,7 @@ public class HomePage extends BasePage {
 		 return driver.findElement(coupon);
 	}
 	public WebElement onSearch(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(search));
 		return driver.findElement(search);
 	}
 	
@@ -48,9 +49,9 @@ public class HomePage extends BasePage {
 		
 	}
 	
-	public WebElement onBathRoomCategoryAd(){
-		wait.until(ExpectedConditions.presenceOfElementLocated(bathRooms));
-		return driver.findElement(bathRooms);
+	public Actions onBathRoomDropDown(){
+		Actions b = new Actions(driver);		
+		return b.moveToElement(driver.findElement(bathRooms));
 		
 	}
 	
@@ -64,9 +65,9 @@ public class HomePage extends BasePage {
 		
 	}
 	
-	public void onAppliancesDropDown(){
+	public Actions onAppliancesDropDown(){
 		Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(appliancesDropDown)).build().perform();
+		return a.moveToElement(driver.findElement(appliancesDropDown));
 		
 	}
 	

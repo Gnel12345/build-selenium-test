@@ -1,5 +1,8 @@
 package com.build.qa.build.selenium.framework;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,9 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 
 import org.assertj.core.api.JUnitSoftAssertions;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.openqa.selenium.NoSuchElementException;
 
@@ -61,8 +61,8 @@ public abstract class BaseFramework {
 		input.close();
 	}
 	
+	@BeforeMethod
 	@SuppressWarnings("deprecation")
-	@Before
 	public void setUpBefore()  {
 		DesiredCapabilities capabilities;
 		// Which driver to use? 
@@ -116,7 +116,7 @@ public abstract class BaseFramework {
 		return configuration.getProperty(config);
 	}
 
-	@After
+	@AfterMethod
 	public void tearDownAfter() {
 		LOG.info("Quitting driver.");
 		driver.quit();

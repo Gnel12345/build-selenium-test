@@ -6,6 +6,8 @@ package com.build.qa.build.selenium.tests;
 
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 
@@ -17,15 +19,9 @@ import org.openqa.selenium.StaleElementReferenceException;
 
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.assertj.core.api.AbstractBooleanAssert;
-import org.assertj.core.api.BooleanAssert;
-import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
-import org.junit.Test;
 
 
 
@@ -41,9 +37,7 @@ import com.build.qa.build.selenium.pageobjects.homepage.RefrigerationPage;
 import com.build.qa.build.selenium.pageobjects.homepage.RefrigeratorPage;
 import com.build.qa.build.selenium.pageobjects.homepage.ShoppingCartPage;
 
-import junit.framework.Assert;
 
-@SuppressWarnings("deprecation")
 public class BuildTest extends BaseFramework { 
 	WebElement element = null;
 	
@@ -100,9 +94,9 @@ public class BuildTest extends BaseFramework {
 		.as("The website should load up with the Build.com desktop theme.")
 		.isTrue();
 		//closes the coupon pop up
-		
+		if(homePage.onCoupon().isDisplayed()){
 		homePage.onCoupon().click();
-		//clicks in the search bar
+		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
 		homePage.onSearch().click();
 		//enters Quoizel MY1613 in the search bar
 		homePage.onSearch().sendKeys("Quoizel MY1613");
@@ -112,9 +106,25 @@ public class BuildTest extends BaseFramework {
 		WebElement msg = driver.findElement(By.id("heading"));
 		String expectedText = ("Quoizel MY1613ML");		
 		String text=msg.getText();	
-		Assert.assertEquals(text,expectedText);
+		AssertJUnit.assertEquals(text,expectedText);
 		System.out.println(text);
 		driver.close();
+		//clicks in the search bar
+		}else{
+		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
+		homePage.onSearch().click();
+		//enters Quoizel MY1613 in the search bar
+		homePage.onSearch().sendKeys("Quoizel MY1613");
+		//clicks the search button
+		homePage.onSearchButton().click();
+		//verifies that Quoizel MY1613 is in the Product Title
+		WebElement msg = driver.findElement(By.id("heading"));
+		String expectedText = ("Quoizel MY1613ML");		
+		String text=msg.getText();	
+		AssertJUnit.assertEquals(text,expectedText);
+		System.out.println(text);
+		driver.close();
+		}
 		}
 	
 	
@@ -146,6 +156,7 @@ public class BuildTest extends BaseFramework {
 		PD.onAddtoCart().click();
 		//continues to cart
 		AddAdditionalToCartPage AddMore = new AddAdditionalToCartPage(driver, wait);
+		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
 		AddMore.onAddMore().click();
 		AddedToCartPage addedtoCart = new AddedToCartPage(driver, wait);
 		addedtoCart.onProceedToCart().click();
@@ -156,7 +167,7 @@ public class BuildTest extends BaseFramework {
 		//if the text contains a " then pass the test
 		if(text.contains("&quot;")){
 		
-		Assert.assertEquals(text,expectedText);
+		AssertJUnit.assertEquals(text,expectedText);
 		System.out.println(text);
 	    driver.close();
 		}
@@ -190,12 +201,14 @@ public class BuildTest extends BaseFramework {
 		
 		homePage.onCoupon().click();
 		//selects bathroom
-		homePage.onBathRoomCategoryAd().click();
+		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
+		homePage.onBathRoomDropDown().build().perform();
 		//selects bathroom faucets
 		BathroomCategoryPage BCP = new BathroomCategoryPage(driver, wait);
 		BCP.onBathroomFaucets().click();
 		//selects Miseno ML641
 		BathroomFaucetsPage BSFP = new BathroomFaucetsPage(driver, wait);
+		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
 		BSFP.onMisenoML641().click();
 		//selects add to cart button 
 		ProductDescriptionPage PD = new ProductDescriptionPage(driver, wait);
@@ -209,49 +222,50 @@ public class BuildTest extends BaseFramework {
 		addedtoCart.onProceedToCart().click();
 		//selects email button
 		ShoppingCartPage shoppingCart = new ShoppingCartPage(driver, wait);
-		shoppingCart.onEmail().click();
+		shoppingCart.onEmailButton().click();
+	    //fills out form
+		shoppingCart.onSenderName().click();
+		shoppingCart.onSenderName().sendKeys("Glenn");
+		shoppingCart.onSenderEmailAddress().click();
+		shoppingCart.onSenderEmailAddress().sendKeys("gnel1234@yahoo.com");
+		shoppingCart.onRecieverName().click();
+		shoppingCart.onRecieverName().sendKeys("Glenn");
+		shoppingCart.onRecieverEmailAddress().click();
+		shoppingCart.onRecieverEmailAddress().sendKeys("gnel1234@yahoo.com");
+		shoppingCart.onSenderMessage().click();
+		shoppingCart.onSenderMessage().sendKeys("This is Glenn, sending you a cart from my automation!");
+		shoppingCart.onEmailButton().click();
 		
 		
 		
 		
-		driver.findElement(By.id("yourName")).click();
-		driver.findElement(By.id("yourName")).sendKeys("Glenn");
-		driver.findElement(By.id("yourEmail")).click();
-		driver.findElement(By.id("yourEmail")).sendKeys("gnel1234@yahoo.com");
-		driver.findElement(By.id("recipientName")).click();
-		driver.findElement(By.id("recipientName")).sendKeys("Glenn");
-		driver.findElement(By.id("recipientEmail")).click();
-		driver.findElement(By.id("recipientEmail")).sendKeys("gnel1234@yahoo.com");
-		driver.findElement(By.id("quoteMessage")).click();
-		driver.findElement(By.id("quoteMessage")).sendKeys("This is Glenn, sending you a cart from my automation!");
-		driver.findElement(By.cssSelector("#cart-email > div > div > div.modal-body.clearfix.pad-content > div.left.js-email-cart-panel > form > div.col-xs-12 > button")).click();
 		WebElement msg1 = driver.findElement(By.cssSelector("#header > div.container-fluid > div > ul > li"));
 		String expectedText1 = ("Cart Sent! The cart has been submitted to the recipient via email.");
 		String text1=msg1.getText();
-		Assert.assertEquals(text1,expectedText1);
+		AssertJUnit.assertEquals(text1,expectedText1);
 		System.out.println(text1);
 		
 		
-		shoppingCart.onEmail().click();
+		shoppingCart.onEmailButton().click();
 			
-		driver.findElement(By.id("yourName")).click();
-		driver.findElement(By.id("yourName")).sendKeys("Glenn");
-		driver.findElement(By.id("yourEmail")).click();
-		driver.findElement(By.id("yourEmail")).sendKeys("gnel1234@yahoo.com");
-		driver.findElement(By.id("recipientName")).click();
-		driver.findElement(By.id("recipientName")).sendKeys("Glenn");
-		driver.findElement(By.id("recipientEmail")).click();
-		driver.findElement(By.id("recipientEmail")).sendKeys("gnel1234@yahoo.com");
-		driver.findElement(By.id("quoteMessage")).click();
-		driver.findElement(By.id("quoteMessage")).sendKeys("This is Glenn, sending you a cart from my automation!");
-		driver.findElement(By.cssSelector("#cart-email > div > div > div.modal-body.clearfix.pad-content > div.left.js-email-cart-panel > form > div.col-xs-12 > button")).click();
+		shoppingCart.onSenderName().click();
+		shoppingCart.onSenderName().sendKeys("Glenn");
+		shoppingCart.onSenderEmailAddress().click();
+		shoppingCart.onSenderEmailAddress().sendKeys("gnel1234@yahoo.com");
+		shoppingCart.onRecieverName().click();
+		shoppingCart.onRecieverName().sendKeys("Glenn");
+		shoppingCart.onRecieverEmailAddress().click();
+		shoppingCart.onRecieverEmailAddress().sendKeys("gnel1234@yahoo.com");
+		shoppingCart.onSenderMessage().click();
+		shoppingCart.onSenderMessage().sendKeys("This is Glenn, sending you a cart from my automation!");
+		shoppingCart.onEmailButton().click();
 		
 		
 		
 		WebElement msg = driver.findElement(By.cssSelector("#header > div.container-fluid > div > ul > li"));
 		String expectedText = ("Cart Sent! The cart has been submitted to the recipient via email.");
 		String text=msg.getText();
-		Assert.assertEquals(text,expectedText);
+		AssertJUnit.assertEquals(text,expectedText);
 		System.out.println(text);
 		driver.close();
 		}	
@@ -283,30 +297,27 @@ public class BuildTest extends BaseFramework {
 		//closes the coupon page
 		homePage.onCoupon().click();
 		//selects the Appliances dropdown menu	
-		Thread.sleep(300);
-		homePage.onAppliancesDropDown();
-		/*Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a"))).build().perform();*/
+		
+		homePage.onAppliancesDropDown().build().perform();
+		
 		//selects refrigeration
-		Thread.sleep(300);
+		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
 		homePage.onRefrigeration().click();
 		//selects refrigerators
 		RefrigerationPage RP = new RefrigerationPage(driver, wait);
 		RP.onRefrigerators().click();
 		//selects the refrigerator finish to be blue
 		RefrigeratorPage categories = new RefrigeratorPage(driver, wait);
-		try{
 		
+		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
 		categories.onFinish().click();
-		}catch(StaleElementReferenceException e){
-			throw e;
-		}
+		
 		//asserts the product count is correct after selecting blue
 		try{
 		WebElement msg = driver.findElement(By.cssSelector("#category-content > div.clearfix.row.productgrid-header > div > div:nth-child(1) > span"));
 		String expectedText = ("14 Products");
 		String text=msg.getText();
-		Assert.assertEquals(text,expectedText);		
+		AssertJUnit.assertEquals(text,expectedText);		
 		System.out.println(text);
 		}catch(StaleElementReferenceException e){
 			throw e;
@@ -319,7 +330,7 @@ public class BuildTest extends BaseFramework {
 		WebElement msgtotal = driver.findElement(By.cssSelector("#category-content > div.clearfix.row.productgrid-header > div > div:nth-child(1) > span"));
 		String totalexpectedText = ("1 Products");
 		String totaltext=msgtotal.getText();
-		Assert.assertEquals(totaltext,totalexpectedText);	
+		AssertJUnit.assertEquals(totaltext,totalexpectedText);	
 		System.out.println(totaltext);
 		
 		driver.close();

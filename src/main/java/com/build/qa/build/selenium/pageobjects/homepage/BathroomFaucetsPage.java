@@ -17,7 +17,7 @@ public class BathroomFaucetsPage extends BasePage{
 	public BathroomFaucetsPage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);
 		
-		MisenoML641 = By.cssSelector("#product-composite-1183675 > div.product-tile > a > div.product-title-description > span");
+		MisenoML641 = By.linkText("https://www.build.com/miseno-ml641/s1183675?uid=2833726");
 		
 	}
 	
