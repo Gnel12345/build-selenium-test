@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
 		coupon = By.cssSelector("#email-subscribe-splash > div > div > div.modal-header.table.modal-no-title > button > span.close-icon");
 		search = By.cssSelector("#search_txt");
 		searchButton = By.cssSelector("#site-search > div > button");
-		bathRooms = By.xpath("//*[@id=header]/nav/div/ul/li[2]/a");
+		bathRooms = By.cssSelector("#header > nav > div > ul > li:nth-child(2) > a");
 		appliancesDropDown = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a");
 		refrigeration = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > div > div > div.table.mega-categories > a:nth-child(1)");
 	}  

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 4 failed,   1 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -115,11 +115,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.build.qa.build.selenium.tests.BuildTest" hash-for-method="facetNarrowBysResultInCorrectProductCounts">facetNarrowBysResultInCorrectProductCounts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.build.qa.build.selenium.tests.BuildTest" hash-for-method="searchForProductLandsOnCorrectProduct">searchForProductLandsOnCorrectProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
@@ -132,6 +127,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.build.qa.build.selenium.tests.BuildTest" hash-for-method="navigateToHomePage">navigateToHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.build.qa.build.selenium.tests.BuildTest" hash-for-method="searchForProductLandsOnCorrectProduct">searchForProductLandsOnCorrectProduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -157,26 +157,26 @@
                   <a name="addProductToCartAndEmailIt">
                   </a> <!-- addProductToCartAndEmailIt -->
                   <span class="method-name">addProductToCartAndEmailIt</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=header]/nav/div/ul/li[2]/a&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#section-tab-0 &gt; section:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div &gt; a &gt; img&quot;}
   (Session info: chrome=64.0.3282.186)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 120.09 seconds
+Command duration or timeout: 120.30 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;GLENNS-HP&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir17456_13279}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.186, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: b0eea02c1c1aceeda733879474922568
-*** Element info: {Using=xpath, value=//*[@id=header]/nav/div/ul/li[2]/a}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir21084_14256}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.186, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 84d4f29efe13a1a5980764a07278245d
+*** Element info: {Using=css selector, value=#section-tab-0 &gt; section:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div &gt; a &gt; img}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at com.build.qa.build.selenium.pageobjects.homepage.HomePage.onBathRoomDropDown(HomePage.java:54)
-	at com.build.qa.build.selenium.tests.BuildTest.addProductToCartAndEmailIt(BuildTest.java:205)
+	at com.build.qa.build.selenium.pageobjects.homepage.BathroomCategoryPage.onBathroomFaucets(BathroomCategoryPage.java:27)
+	at com.build.qa.build.selenium.tests.BuildTest.addProductToCartAndEmailIt(BuildTest.java:209)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -186,22 +186,9 @@ Session ID: b0eea02c1c1aceeda733879474922568
                   <a name="addProductToCartFromCategoryDrop">
                   </a> <!-- addProductToCartFromCategoryDrop -->
                   <span class="method-name">addProductToCartFromCategoryDrop</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=64.0.3282.186)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 606 milliseconds
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;GLENNS-HP&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir18896_2029}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.186, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: bb106a1d0cbc72ad99f66d7f5757fd58
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at com.build.qa.build.selenium.tests.BuildTest.addProductToCartFromCategoryDrop(BuildTest.java:160)
-... Removed 29 stack frames
+                  <div class="stack-trace">java.lang.ClassCastException: org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By
+	at com.build.qa.build.selenium.tests.BuildTest.addProductToCartFromCategoryDrop(BuildTest.java:159)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -210,46 +197,9 @@ Session ID: bb106a1d0cbc72ad99f66d7f5757fd58
                   <a name="facetNarrowBysResultInCorrectProductCounts">
                   </a> <!-- facetNarrowBysResultInCorrectProductCounts -->
                   <span class="method-name">facetNarrowBysResultInCorrectProductCounts</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=64.0.3282.186)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 291 milliseconds
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;GLENNS-HP&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15328_14449}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.186, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 71f4897c1bb9d82433256c47fbe35378
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+                  <div class="stack-trace">java.lang.ClassCastException: org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By
 	at com.build.qa.build.selenium.tests.BuildTest.facetNarrowBysResultInCorrectProductCounts(BuildTest.java:305)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchForProductLandsOnCorrectProduct">
-                  </a> <!-- searchForProductLandsOnCorrectProduct -->
-                  <span class="method-name">searchForProductLandsOnCorrectProduct</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;input type=&quot;text&quot; id=&quot;search_txt&quot; name=&quot;term&quot; autocomplete=&quot;off&quot; autocapitalize=&quot;none&quot; autocorrect=&quot;off&quot; placeholder=&quot;What are you shopping for?&quot; class=&quot;solo search-site-input js-site-search-input&quot; value=&quot;&quot; onclick=&quot;s_objectID=&apos;What are you shopping for?&apos;;&quot;&gt; is not clickable at point (881, 72). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=64.0.3282.186)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 130 milliseconds
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;GLENNS-HP&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir16916_32094}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=64.0.3282.186, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 83220327e3baaf35f2fce394abe8a07b
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at com.build.qa.build.selenium.tests.BuildTest.searchForProductLandsOnCorrectProduct(BuildTest.java:100)
-... Removed 29 stack frames
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -266,6 +216,13 @@ Session ID: 83220327e3baaf35f2fce394abe8a07b
                   <a name="navigateToHomePage">
                   </a> <!-- navigateToHomePage -->
                   <span class="method-name">navigateToHomePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchForProductLandsOnCorrectProduct">
+                  </a> <!-- searchForProductLandsOnCorrectProduct -->
+                  <span class="method-name">searchForProductLandsOnCorrectProduct</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -327,23 +284,23 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addProductToCartAndEmailIt')
 data.setCell(0, 2, 'com.build.qa.build.selenium.tests.BuildTest')
-data.setCell(0, 3, 132170);
+data.setCell(0, 3, 130011);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addProductToCartFromCategoryDrop')
 data.setCell(1, 2, 'com.build.qa.build.selenium.tests.BuildTest')
-data.setCell(1, 3, 28656);
+data.setCell(1, 3, 32428);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'navigateToHomePage')
+data.setCell(2, 1, 'searchForProductLandsOnCorrectProduct')
 data.setCell(2, 2, 'com.build.qa.build.selenium.tests.BuildTest')
-data.setCell(2, 3, 10681);
+data.setCell(2, 3, 28863);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'searchForProductLandsOnCorrectProduct')
+data.setCell(3, 1, 'navigateToHomePage')
 data.setCell(3, 2, 'com.build.qa.build.selenium.tests.BuildTest')
-data.setCell(3, 3, 9319);
+data.setCell(3, 3, 18698);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'facetNarrowBysResultInCorrectProductCounts')
 data.setCell(4, 2, 'com.build.qa.build.selenium.tests.BuildTest')
-data.setCell(4, 3, 9281);
+data.setCell(4, 3, 9933);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -381,71 +338,69 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBefore</span>
-                <span class="method-start">157 ms</span>
+                <span class="method-start">221 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addProductToCartAndEmailIt</span>
-                <span class="method-start">7292 ms</span>
+                <span class="method-start">6589 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfter</span>
-                <span class="method-start">139481 ms</span>
+                <span class="method-start">136617 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBefore</span>
-                <span class="method-start">141732 ms</span>
+                <span class="method-start">139104 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addProductToCartFromCategoryDrop</span>
-                <span class="method-start">145856 ms</span>
+                <span class="method-start">142871 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfter</span>
-                <span class="method-start">174519 ms</span>
+                <span class="method-start">175307 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBefore</span>
-                <span class="method-start">176433 ms</span>
+                <span class="method-start">177234 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">facetNarrowBysResultInCorrectProductCounts</span>
-                <span class="method-start">180148 ms</span>
+                <span class="method-start">180700 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfter</span>
-                <span class="method-start">189433 ms</span>
+                <span class="method-start">190637 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBefore</span>
-                <span class="method-start">191221 ms</span>
+                <span class="method-start">192894 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">navigateToHomePage</span>
-                <span class="method-start">194325 ms</span>
+                <span class="method-start">195640 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfter</span>
-                <span class="method-start">205010 ms</span>
+                <span class="method-start">214342 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBefore</span>
-                <span class="method-start">206318 ms</span>
+                <span class="method-start">215708 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">searchForProductLandsOnCorrectProduct</span>
-                <span class="method-start">209223 ms</span>
+                <span class="method-start">218528 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAfter</span>
-                <span class="method-start">218546 ms</span>
+                <span class="method-start">247394 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

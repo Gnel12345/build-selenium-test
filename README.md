@@ -17,3 +17,5 @@ More bonus points (be impressive):
 Notes:
 * Ignore/skip CAPTCHA page (if encountered), submit code as if it does not exist or wait for user to complete it.
 * Take your time.
+///////////////////////////////////////////////////////////
+To change browsers go to con/automation.properties to switch between chrome, firefox, opera amd Internet Explorer

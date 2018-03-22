@@ -156,7 +156,7 @@ public class BuildTest extends BaseFramework {
 		PD.onAddtoCart().click();
 		//continues to cart
 		AddAdditionalToCartPage AddMore = new AddAdditionalToCartPage(driver, wait);
-		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.presenceOfElementLocated((By) AddMore.onAddMore()));
 		AddMore.onAddMore().click();
 		AddedToCartPage addedtoCart = new AddedToCartPage(driver, wait);
 		addedtoCart.onProceedToCart().click();
@@ -205,6 +205,7 @@ public class BuildTest extends BaseFramework {
 		homePage.onBathRoomDropDown().build().perform();
 		//selects bathroom faucets
 		BathroomCategoryPage BCP = new BathroomCategoryPage(driver, wait);
+        Thread.sleep(300); 
 		BCP.onBathroomFaucets().click();
 		//selects Miseno ML641
 		BathroomFaucetsPage BSFP = new BathroomFaucetsPage(driver, wait);
@@ -301,7 +302,7 @@ public class BuildTest extends BaseFramework {
 		homePage.onAppliancesDropDown().build().perform();
 		
 		//selects refrigeration
-		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.presenceOfElementLocated((By) homePage.onRefrigeration())).isDisplayed();
 		homePage.onRefrigeration().click();
 		//selects refrigerators
 		RefrigerationPage RP = new RefrigerationPage(driver, wait);
