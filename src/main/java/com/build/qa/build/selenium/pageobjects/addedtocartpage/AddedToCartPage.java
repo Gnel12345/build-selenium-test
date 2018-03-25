@@ -1,4 +1,4 @@
-package com.build.qa.build.selenium.pageobjects.homepage;
+package com.build.qa.build.selenium.pageobjects.addedtocartpage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

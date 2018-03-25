@@ -26,16 +26,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 import com.build.qa.build.selenium.framework.BaseFramework;
-import com.build.qa.build.selenium.pageobjects.homepage.AddAdditionalToCartPage;
-import com.build.qa.build.selenium.pageobjects.homepage.AddedToCartPage;
-import com.build.qa.build.selenium.pageobjects.homepage.BathroomCategoryPage;
-import com.build.qa.build.selenium.pageobjects.homepage.BathroomFaucetsPage;
-import com.build.qa.build.selenium.pageobjects.homepage.BathroomSinksPage;
+import com.build.qa.build.selenium.pageobjects.addadditionaltocartpage.AddAdditionalToCartPage;
+import com.build.qa.build.selenium.pageobjects.addedtocartpage.AddedToCartPage;
+import com.build.qa.build.selenium.pageobjects.bathroomfaucetspage.BathroomFaucetsPage;
+import com.build.qa.build.selenium.pageobjects.bathroomsinkspage.BathroomSinksPage;
+
 import com.build.qa.build.selenium.pageobjects.homepage.HomePage;
-import com.build.qa.build.selenium.pageobjects.homepage.ProductDescriptionPage;
-import com.build.qa.build.selenium.pageobjects.homepage.RefrigerationPage;
-import com.build.qa.build.selenium.pageobjects.homepage.RefrigeratorPage;
-import com.build.qa.build.selenium.pageobjects.homepage.ShoppingCartPage;
+import com.build.qa.build.selenium.pageobjects.productdescriptionpage.ProductDescriptionPage;
+import com.build.qa.build.selenium.pageobjects.refrigerationpage.RefrigerationPage;
+import com.build.qa.build.selenium.pageobjects.refrigeratorpage.RefrigeratorPage;
+import com.build.qa.build.selenium.pageobjects.shoppingcartpage.ShoppingCartPage;
 
 
 public class BuildTest extends BaseFramework { 
@@ -201,15 +201,17 @@ public class BuildTest extends BaseFramework {
 		
 		homePage.onCoupon().click();
 		//selects bathroom
-		driver.manage().timeouts().implicitlyWait(120,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(150,TimeUnit.SECONDS);
 		homePage.onBathRoomDropDown().build().perform();
+		//Thread.sleep(300);
 		//selects bathroom faucets
-		BathroomCategoryPage BCP = new BathroomCategoryPage(driver, wait);
-        Thread.sleep(300); 
-		BCP.onBathroomFaucets().click();
+		
+		homePage.onBathroomFaucets().click();
 		//selects Miseno ML641
 		BathroomFaucetsPage BSFP = new BathroomFaucetsPage(driver, wait);
 		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
+		JavascriptExecutor jsee = (JavascriptExecutor)driver;
+		jsee.executeScript("window.scrollBy(0,470)", "");
 		BSFP.onMisenoML641().click();
 		//selects add to cart button 
 		ProductDescriptionPage PD = new ProductDescriptionPage(driver, wait);
@@ -223,6 +225,7 @@ public class BuildTest extends BaseFramework {
 		addedtoCart.onProceedToCart().click();
 		//selects email button
 		ShoppingCartPage shoppingCart = new ShoppingCartPage(driver, wait);
+		if(shoppingCart.onEmailButton().isDisplayed()){
 		shoppingCart.onEmailButton().click();
 	    //fills out form
 		shoppingCart.onSenderName().click();
@@ -268,7 +271,9 @@ public class BuildTest extends BaseFramework {
 		String text=msg.getText();
 		AssertJUnit.assertEquals(text,expectedText);
 		System.out.println(text);
+		}else{
 		driver.close();
+		}
 		}	
 		
 	

@@ -10,11 +10,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.io.FileUtils;
 import org.assertj.core.api.JUnitSoftAssertions;
 import org.junit.Rule;
 import org.openqa.selenium.NoSuchElementException;
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -121,6 +122,13 @@ public abstract class BaseFramework {
 		LOG.info("Quitting driver.");
 		driver.quit();
 		driver = null;
+	}
+	
+	public void getScreenshot(String result) throws IOException
+	{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("./test-output/"+result+"screenshot.png"));
+		
 	}
 	
 }

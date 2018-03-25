@@ -1,4 +1,4 @@
-package com.build.qa.build.selenium.pageobjects.homepage;
+package com.build.qa.build.selenium.pageobjects.productdescriptionpage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +16,7 @@ public class ProductDescriptionPage extends BasePage{
 	public ProductDescriptionPage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);
 		
-		AddToCart = By.cssSelector("#configure-product-wrap > button");
+		AddToCart = By.id("add-to-cart-wrap");
 		
 	}
 	

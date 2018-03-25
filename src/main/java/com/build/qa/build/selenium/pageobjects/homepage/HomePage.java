@@ -19,6 +19,7 @@ public class HomePage extends BasePage {
 	private By bathRooms;
 	private By refrigeration;
 	private By appliancesDropDown;
+	private By faucets;
 		
 	public HomePage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);
@@ -29,6 +30,7 @@ public class HomePage extends BasePage {
 		bathRooms = By.cssSelector("#header > nav > div > ul > li:nth-child(2) > a");
 		appliancesDropDown = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > a");
 		refrigeration = By.cssSelector("#header > nav > div > ul > li:nth-child(7) > div > div > div.table.mega-categories > a:nth-child(1)");
+		faucets = By.cssSelector("#header > nav > div > ul > li:nth-child(2) > div > div > div.table.mega-categories > a:nth-child(1) > img");
 	}  
 	
 	public boolean onBuildTheme() { 
@@ -73,6 +75,13 @@ public class HomePage extends BasePage {
 	
 	
 	
+	public WebElement onBathroomFaucets(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(faucets));
+		return driver.findElement(faucets);
+	}
+	
+	
+
 	
 	
 }

@@ -1,4 +1,4 @@
-package com.build.qa.build.selenium.pageobjects.homepage;
+package com.build.qa.build.selenium.pageobjects.shoppingcartpage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -30,7 +30,7 @@ public class ShoppingCartPage extends BasePage{
 		recieverName = By.id("recipientName");
 		recieverEmailAddress = By.id("recipientEmail");
 		senderMessage = By.id("quoteMessage");
-		sendEmailButton = By.cssSelector("#cart-email > div > div > div.modal-body.clearfix.pad-content > div.left.js-email-cart-panel > form > div.col-xs-12 > button");
+		sendEmailButton = By.xpath("//*[@id=cart-email]/div/div/div[2]/div[2]/form/div[4]/button");
 	}
 	
 	public WebElement onEmailButton() throws InterruptedException{
@@ -45,31 +45,36 @@ public class ShoppingCartPage extends BasePage{
 	}
 	
 	public WebElement onSenderName(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(senderName));
 		return driver.findElement(senderName);
 		
 	}
 	
 	public WebElement onSenderEmailAddress(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(senderEmailAddress));
 		return driver.findElement(senderEmailAddress);		
 		
 	}
 	
 	public WebElement onRecieverName(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(recieverName));
 		return driver.findElement(recieverName);	
 		
 	}
 	
 	public WebElement onRecieverEmailAddress(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(recieverEmailAddress));
 		return driver.findElement(recieverEmailAddress);
 		
 	}
 	
 	public WebElement onSenderMessage(){
-		
+		wait.until(ExpectedConditions.presenceOfElementLocated(senderMessage));
 		return driver.findElement(senderMessage);
 	}
 	
 	public WebElement onSendEmailButton(){
+		wait.until(ExpectedConditions.presenceOfElementLocated(sendEmailButton));
 		return driver.findElement(sendEmailButton);
 		
 	}
