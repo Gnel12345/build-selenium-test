@@ -1,47 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
+<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="230158" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:47:52Z">
+  <suite name="Suite" duration-ms="147636" started-at="2018-04-18T14:47:00Z" finished-at="2018-04-18T14:49:28Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="230158" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:47:52Z">
+    <test name="Test" duration-ms="147636" started-at="2018-04-18T14:47:00Z" finished-at="2018-04-18T14:49:28Z">
       <class name="com.build.qa.build.selenium.tests.BuildTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeClass" is-config="true" duration-ms="123" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:44:02Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeClass" is-config="true" duration-ms="228" started-at="2018-04-18T14:47:00Z" finished-at="2018-04-18T14:47:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="41072" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:44:43Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="setUpBefore" is-config="true" duration-ms="6322" started-at="2018-04-18T14:47:00Z" finished-at="2018-04-18T14:47:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:44:43Z" finished-at="2018-04-18T13:44:43Z">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeTests" is-config="true" duration-ms="205" started-at="2018-04-18T14:47:07Z" finished-at="2018-04-18T14:47:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTests -->
-        <test-method status="FAIL" signature="addProductToCartAndEmailIt()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="addProductToCartAndEmailIt" duration-ms="42277" started-at="2018-04-18T13:44:43Z" finished-at="2018-04-18T13:45:25Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="addProductToCartAndEmailIt()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="addProductToCartAndEmailIt" duration-ms="16064" started-at="2018-04-18T14:47:07Z" finished-at="2018-04-18T14:47:23Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
-              <![CDATA[unknown error: call function result missing 'value'
+              <![CDATA[element not visible
   (Session info: chrome with embedded Chromium 65.0.3325.181)
   (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 172 milliseconds
+Command duration or timeout: 4.83 seconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir832_3204}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 7ef4c0f5c15322175bdaad21f9b2be1c]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir16708_19504}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 99686e20f797ffc7f7e8176a94ef6963]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: call function result missing 'value'
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
   (Session info: chrome with embedded Chromium 65.0.3325.181)
   (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 172 milliseconds
+Command duration or timeout: 4.83 seconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir832_3204}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 7ef4c0f5c15322175bdaad21f9b2be1c
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir16708_19504}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 99686e20f797ffc7f7e8176a94ef6963
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+at com.build.qa.build.selenium.tests.BuildTest.addProductToCartAndEmailIt(BuildTest.java:247)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToCartAndEmailIt -->
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="tearDownAfter" is-config="true" duration-ms="3418" started-at="2018-04-18T14:47:23Z" finished-at="2018-04-18T14:47:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfter -->
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="setUpBefore" is-config="true" duration-ms="3146" started-at="2018-04-18T14:47:27Z" finished-at="2018-04-18T14:47:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBefore -->
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeTests" is-config="true" duration-ms="12" started-at="2018-04-18T14:47:30Z" finished-at="2018-04-18T14:47:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="addProductToCartFromCategoryDrop()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="addProductToCartFromCategoryDrop" duration-ms="13759" started-at="2018-04-18T14:47:30Z" finished-at="2018-04-18T14:47:43Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Runtime.evaluate threw exception: SyntaxError: missing ) after argument list
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 339 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir16392_23922}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 68906b8f9b9ec7223e6e3c43f5321710]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Runtime.evaluate threw exception: SyntaxError: missing ) after argument list
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 339 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir16392_23922}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 68906b8f9b9ec7223e6e3c43f5321710
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -50,7 +126,7 @@ at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215
 at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
 at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:573)
-at com.build.qa.build.selenium.tests.BuildTest.addProductToCartAndEmailIt(BuildTest.java:252)
+at com.build.qa.build.selenium.tests.BuildTest.addProductToCartFromCategoryDrop(BuildTest.java:185)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -81,270 +157,74 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductToCartAndEmailIt -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="2557" started-at="2018-04-18T13:45:25Z" finished-at="2018-04-18T13:45:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownAfter -->
-        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="16275" started-at="2018-04-18T13:45:28Z" finished-at="2018-04-18T13:45:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBefore -->
-        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="1" started-at="2018-04-18T13:45:44Z" finished-at="2018-04-18T13:45:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTests -->
-        <test-method status="FAIL" signature="addProductToCartFromCategoryDrop()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="addProductToCartFromCategoryDrop" duration-ms="16605" started-at="2018-04-18T13:45:44Z" finished-at="2018-04-18T13:46:00Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 975 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14588_27795}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: b7ee5c1f50ee29f6ada6e2bbb8cf34a0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 975 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14588_27795}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: b7ee5c1f50ee29f6ada6e2bbb8cf34a0
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-at com.build.qa.build.selenium.tests.BuildTest.addProductToCartFromCategoryDrop(BuildTest.java:180)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- addProductToCartFromCategoryDrop -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="1965" started-at="2018-04-18T13:46:00Z" finished-at="2018-04-18T13:46:02Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="tearDownAfter" is-config="true" duration-ms="1923" started-at="2018-04-18T14:47:43Z" finished-at="2018-04-18T14:47:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="9976" started-at="2018-04-18T13:46:02Z" finished-at="2018-04-18T13:46:12Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="setUpBefore" is-config="true" duration-ms="5790" started-at="2018-04-18T14:47:45Z" finished-at="2018-04-18T14:47:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="1" started-at="2018-04-18T13:46:12Z" finished-at="2018-04-18T13:46:12Z">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeTests" is-config="true" duration-ms="22" started-at="2018-04-18T14:47:51Z" finished-at="2018-04-18T14:47:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTests -->
-        <test-method status="FAIL" signature="facetNarrowBysResultInCorrectProductCounts()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="facetNarrowBysResultInCorrectProductCounts" duration-ms="15448" started-at="2018-04-18T13:46:12Z" finished-at="2018-04-18T13:46:28Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 89 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir12620_31079}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 961a4a88ae412b98e6e1efcf8141e146]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 89 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir12620_31079}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 961a4a88ae412b98e6e1efcf8141e146
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-at com.build.qa.build.selenium.tests.BuildTest.facetNarrowBysResultInCorrectProductCounts(BuildTest.java:343)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+        <test-method status="PASS" signature="facetNarrowBysResultInCorrectProductCounts()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="facetNarrowBysResultInCorrectProductCounts" duration-ms="47347" started-at="2018-04-18T14:47:51Z" finished-at="2018-04-18T14:48:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facetNarrowBysResultInCorrectProductCounts -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="1614" started-at="2018-04-18T13:46:28Z" finished-at="2018-04-18T13:46:29Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="tearDownAfter" is-config="true" duration-ms="2272" started-at="2018-04-18T14:48:39Z" finished-at="2018-04-18T14:48:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="18801" started-at="2018-04-18T13:46:30Z" finished-at="2018-04-18T13:46:48Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="setUpBefore" is-config="true" duration-ms="3759" started-at="2018-04-18T14:48:41Z" finished-at="2018-04-18T14:48:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:46:48Z" finished-at="2018-04-18T13:46:48Z">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeTests" is-config="true" duration-ms="22" started-at="2018-04-18T14:48:45Z" finished-at="2018-04-18T14:48:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTests -->
-        <test-method status="FAIL" signature="navigateToHomePage()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="navigateToHomePage" duration-ms="16953" started-at="2018-04-18T13:46:48Z" finished-at="2018-04-18T13:47:05Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
-            <message>
-              <![CDATA[element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15540_11278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: b6469760974265a5815a520f8df04b3e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome with embedded Chromium 65.0.3325.181)
-  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.15 seconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15540_11278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: b6469760974265a5815a520f8df04b3e
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-at com.build.qa.build.selenium.tests.BuildTest.navigateToHomePage(BuildTest.java:85)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+        <test-method status="PASS" signature="navigateToHomePage()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="navigateToHomePage" duration-ms="15805" started-at="2018-04-18T14:48:45Z" finished-at="2018-04-18T14:49:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToHomePage -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="2639" started-at="2018-04-18T13:47:05Z" finished-at="2018-04-18T13:47:08Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="tearDownAfter" is-config="true" duration-ms="1936" started-at="2018-04-18T14:49:00Z" finished-at="2018-04-18T14:49:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="17964" started-at="2018-04-18T13:47:08Z" finished-at="2018-04-18T13:47:26Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="setUpBefore" is-config="true" duration-ms="4775" started-at="2018-04-18T14:49:02Z" finished-at="2018-04-18T14:49:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:47:26Z" finished-at="2018-04-18T13:47:26Z">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="beforeTests" is-config="true" duration-ms="15" started-at="2018-04-18T14:49:07Z" finished-at="2018-04-18T14:49:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTests -->
-        <test-method status="FAIL" signature="searchForProductLandsOnCorrectProduct()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="searchForProductLandsOnCorrectProduct" duration-ms="22257" started-at="2018-04-18T13:47:26Z" finished-at="2018-04-18T13:47:48Z">
+        <test-method status="FAIL" signature="searchForProductLandsOnCorrectProduct()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="searchForProductLandsOnCorrectProduct" duration-ms="17522" started-at="2018-04-18T14:49:07Z" finished-at="2018-04-18T14:49:25Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: call function result missing 'value'
   (Session info: chrome with embedded Chromium 65.0.3325.181)
   (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 57 milliseconds
+Command duration or timeout: 70 milliseconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15960_18735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a73c418dce49006e5078c63a8d855739]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14732_6434}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e0e489330de8ea180f8b53af3481f9b0]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: call function result missing 'value'
   (Session info: chrome with embedded Chromium 65.0.3325.181)
   (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 57 milliseconds
+Command duration or timeout: 70 milliseconds
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.opera.OperaDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15960_18735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a73c418dce49006e5078c63a8d855739
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14732_6434}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e0e489330de8ea180f8b53af3481f9b0
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -386,7 +266,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForProductLandsOnCorrectProduct -->
-        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="3533" started-at="2018-04-18T13:47:48Z" finished-at="2018-04-18T13:47:52Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@eaa59a]" name="tearDownAfter" is-config="true" duration-ms="3170" started-at="2018-04-18T14:49:25Z" finished-at="2018-04-18T14:49:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->

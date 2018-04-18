@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-
+import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -50,12 +50,12 @@ import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 public class BuildTest extends BaseFramework { 
 	@BeforeMethod
 	public void beforeTests(){
-		//DOMConfigurator.configure("C://Users//Glenns//Desktop//build-selenium-test-master//src//test//java//resources//log4j2.xml");
+		DOMConfigurator.configure("log4j.xml");
 	}
 	
 	WebElement element = null;
 	
-	//public static Logger Log = LogManager.getLogger(BuildTest.class.getName());
+	public static Logger Log = LogManager.getLogger(BuildTest.class.getName());
 	
 	/** 
 	 * Extremely basic test that outlines some basic
@@ -69,7 +69,7 @@ public class BuildTest extends BaseFramework {
 	public  void navigateToHomePage() throws InterruptedException, IOException { 
 		//opens the HomePage
 		driver.get(getConfiguration("HOMEPAGE"));
-		//Log.info("Driver successfully initialized");
+		Log.info("Driver successfully initialized");
 		 HomePage homePage = new HomePage(driver,wait);
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
@@ -78,7 +78,7 @@ public class BuildTest extends BaseFramework {
 		 softly.assertThat(homePage.onBuildTheme())
 		 .as("The website should load up with the Build.com desktop theme.")
 		 .isTrue();
-		// Log.info("Website successfully loaded");
+		 Log.info("Website successfully loaded");
 		 
 		 //closes the coupon pop up
 		 
