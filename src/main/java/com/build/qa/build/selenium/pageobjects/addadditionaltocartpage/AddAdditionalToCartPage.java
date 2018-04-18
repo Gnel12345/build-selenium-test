@@ -1,5 +1,7 @@
 package com.build.qa.build.selenium.pageobjects.addadditionaltocartpage;
 
+import java.util.function.Function;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +12,7 @@ import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class AddAdditionalToCartPage extends BasePage {
 	
-	private By AddAdditional;
+	public By AddAdditional;
 	
 
 	public AddAdditionalToCartPage(WebDriver driver, Wait<WebDriver> wait) {

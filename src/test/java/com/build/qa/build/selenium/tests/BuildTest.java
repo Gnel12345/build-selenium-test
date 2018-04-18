@@ -6,18 +6,26 @@ package com.build.qa.build.selenium.tests;
 
 
 
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import org.w3c.dom.DOMConfiguration;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
-
-
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -36,22 +44,32 @@ import com.build.qa.build.selenium.pageobjects.productdescriptionpage.ProductDes
 import com.build.qa.build.selenium.pageobjects.refrigerationpage.RefrigerationPage;
 import com.build.qa.build.selenium.pageobjects.refrigeratorpage.RefrigeratorPage;
 import com.build.qa.build.selenium.pageobjects.shoppingcartpage.ShoppingCartPage;
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 
 public class BuildTest extends BaseFramework { 
+	@BeforeMethod
+	public void beforeTests(){
+		//DOMConfigurator.configure("C://Users//Glenns//Desktop//build-selenium-test-master//src//test//java//resources//log4j2.xml");
+	}
+	
 	WebElement element = null;
+	
+	//public static Logger Log = LogManager.getLogger(BuildTest.class.getName());
 	
 	/** 
 	 * Extremely basic test that outlines some basic
 	 * functionality and page objects as well as assertJ
+	 * 
 	 * @return 
 	 * @throws InterruptedException 
+	 * @throws IOException 
 	 */
 	@Test
-	public void navigateToHomePage() throws InterruptedException { 
+	public  void navigateToHomePage() throws InterruptedException, IOException { 
 		//opens the HomePage
 		driver.get(getConfiguration("HOMEPAGE"));
-		
+		//Log.info("Driver successfully initialized");
 		 HomePage homePage = new HomePage(driver,wait);
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
@@ -60,11 +78,16 @@ public class BuildTest extends BaseFramework {
 		 softly.assertThat(homePage.onBuildTheme())
 		 .as("The website should load up with the Build.com desktop theme.")
 		 .isTrue();
+		// Log.info("Website successfully loaded");
+		 
 		 //closes the coupon pop up
 		 
 		homePage.onCoupon().click();
-		    		
-		 driver.close();		
+		//Log.info("Coupon pop up successfully closed");
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("/test-output/screenshots/screenshot.jpeg"));
+		 driver.close();	
+		 //Log.info("Driver successfully closed");
 		    		
 		    		
 		    		
@@ -80,34 +103,44 @@ public class BuildTest extends BaseFramework {
 	
 	/** 
 	 * Search for the Quoizel MY1613 from the search bar
+	 * @param result 
 	 * @throws InterruptedException 
+	 * @throws IOException 
 	 * @assert: That the product page we land on is what is expected by checking the product title
 	 * @difficulty Easy
 	 */
 	@Test
-	public void searchForProductLandsOnCorrectProduct() throws InterruptedException { 
-		driver.get(getConfiguration("HOMEPAGE"));		
+	public void searchForProductLandsOnCorrectProduct() throws InterruptedException, IOException { 
+		driver.get(getConfiguration("HOMEPAGE"));	
+		//Log.info("Driver successfully initialized");
 		 HomePage homePage = new HomePage(driver,wait);
 		 driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		softly.assertThat(homePage.onBuildTheme())
 		.as("The website should load up with the Build.com desktop theme.")
 		.isTrue();
+		//Log.info("Website successfully loaded");
+		getScreenshot();
 		//closes the coupon pop up
 		if(homePage.onCoupon().isDisplayed()){
 		homePage.onCoupon().click();
 		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
 		homePage.onSearch().click();
+		//Log.info("Search bar successfully clicked ");
+		getScreenshot();
 		//enters Quoizel MY1613 in the search bar
 		homePage.onSearch().sendKeys("Quoizel MY1613");
+		//Log.info("Quoizel MY1613 entered");
+		getScreenshot();
 		//clicks the search button
 		homePage.onSearchButton().click();
+		//Log.info("Search button clicked");
 		//verifies that Quoizel MY1613 is in the Product Title
 		WebElement msg = driver.findElement(By.id("heading"));
 		String expectedText = ("Quoizel MY1613ML");		
 		String text=msg.getText();	
 		AssertJUnit.assertEquals(text,expectedText);
-		System.out.println(text);
+		//Log.info(text);
 		driver.close();
 		//clicks in the search bar
 		}else{
@@ -138,7 +171,8 @@ public class BuildTest extends BaseFramework {
 	@Test
 	public void addProductToCartFromCategoryDrop() throws InterruptedException { 
 		//goes to the bathroom sink category
-		driver.get("https://www.build.com/bathroom-sinks/c108504");			 
+		driver.get("https://www.build.com/bathroom-sinks/c108504");	
+		//Log.info("Bathroom sinks page successfully loaded");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		//closes the coupon pop up
@@ -147,10 +181,13 @@ public class BuildTest extends BaseFramework {
 		Thread.sleep(300);
 		//selects the product
 		BathroomSinksPage BSP = new BathroomSinksPage(driver, wait);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250","");
+		
 		BSP.onUndermountSink().click();
 		//scrolls down to the add to cart button 
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,470)", "");
+		//JavascriptExecutor jse = (JavascriptExecutor)driver;
+		//jse.executeScript("window.scrollBy(0,470)", "");
 		//adds the product to cart
 		ProductDescriptionPage PD = new ProductDescriptionPage(driver, wait);
 		PD.onAddtoCart().click();
@@ -190,7 +227,8 @@ public class BuildTest extends BaseFramework {
 	public void addProductToCartAndEmailIt() throws InterruptedException { 
 		//loads home page
 		
-		driver.get(getConfiguration("HOMEPAGE"));		
+		driver.get(getConfiguration("HOMEPAGE"));
+		//Log.info("Driver successfully initialized");
 		 HomePage homePage = new HomePage(driver,wait);
 		 driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
@@ -293,7 +331,8 @@ public class BuildTest extends BaseFramework {
 	@Test
 	public void facetNarrowBysResultInCorrectProductCounts() throws InterruptedException { 
 		//loads home page
-		driver.get(getConfiguration("HOMEPAGE"));		
+		driver.get(getConfiguration("HOMEPAGE"));
+		//Log.info("Driver successfully initialized");
 		 HomePage homePage = new HomePage(driver,wait);
 		 driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
@@ -307,7 +346,7 @@ public class BuildTest extends BaseFramework {
 		homePage.onAppliancesDropDown().build().perform();
 		
 		//selects refrigeration
-		wait.until(ExpectedConditions.presenceOfElementLocated((By) homePage.onRefrigeration())).isDisplayed();
+		///wait.until(ExpectedConditions.presenceOfElementLocated((By) homePage.onRefrigeration())).isDisplayed();
 		homePage.onRefrigeration().click();
 		//selects refrigerators
 		RefrigerationPage RP = new RefrigerationPage(driver, wait);
@@ -344,7 +383,12 @@ public class BuildTest extends BaseFramework {
 		
 		}
 		
+	public  void getScreenshot() throws IOException
+	{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C://Users//Glenns//Desktop//Screenshots//screenshot.jpeg"));
 		
+	}
 		
 }
 	

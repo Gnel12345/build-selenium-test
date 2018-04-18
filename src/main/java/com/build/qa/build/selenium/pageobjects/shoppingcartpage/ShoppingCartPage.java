@@ -10,13 +10,13 @@ import org.openqa.selenium.support.ui.Wait;
 import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class ShoppingCartPage extends BasePage{
-	private By emailbutton;
-	private By senderName;
-	private By senderEmailAddress;
-	private By senderMessage;
-	private By recieverName;
-	private By recieverEmailAddress;
-	private By sendEmailButton;
+	public By emailbutton;
+	public By senderName;
+	public By senderEmailAddress;
+	public By senderMessage;
+	public By recieverName;
+	public By recieverEmailAddress;
+	public By sendEmailButton;
 	
 	
 	

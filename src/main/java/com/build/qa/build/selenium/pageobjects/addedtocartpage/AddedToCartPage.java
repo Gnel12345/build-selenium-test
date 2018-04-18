@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Wait;
 import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class AddedToCartPage extends BasePage{
-	private By ProceedToCart;
+	public By ProceedToCart;
 	
 	
 	

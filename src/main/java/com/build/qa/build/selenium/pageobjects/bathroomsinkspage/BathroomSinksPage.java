@@ -1,16 +1,18 @@
 package com.build.qa.build.selenium.pageobjects.bathroomsinkspage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.build.qa.build.selenium.pageobjects.BasePage;
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class BathroomSinksPage extends BasePage{
 	
 	
-	private By KohlerK2355;
+	public By KohlerK2355;
 
 	public BathroomSinksPage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);
@@ -23,7 +25,7 @@ public class BathroomSinksPage extends BasePage{
 		return driver.findElement(KohlerK2355);
 		
 		
-		
+	
 	}
 
 }

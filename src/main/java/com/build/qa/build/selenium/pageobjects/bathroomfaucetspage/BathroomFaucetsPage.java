@@ -10,7 +10,7 @@ import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class BathroomFaucetsPage extends BasePage{
 	
-	private By MisenoML641;
+	public By MisenoML641;
 	
 	
 

@@ -10,7 +10,7 @@ import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class RefrigerationPage extends BasePage {
 	
-	private By refrigerators;
+	public By refrigerators;
 	
 	
 	

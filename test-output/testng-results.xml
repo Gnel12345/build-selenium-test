@@ -1,81 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
+<testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="162" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+  <suite name="Suite" duration-ms="230158" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:47:52Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="162" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+    <test name="Test" duration-ms="230158" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:47:52Z">
       <class name="com.build.qa.build.selenium.tests.BuildTest">
-        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="beforeClass" is-config="true" duration-ms="21" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeClass" is-config="true" duration-ms="123" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:44:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="SKIP" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="setUpBefore" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="41072" started-at="2018-04-18T13:44:02Z" finished-at="2018-04-18T13:44:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="SKIP" signature="addProductToCartAndEmailIt()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="addProductToCartAndEmailIt" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:44:43Z" finished-at="2018-04-18T13:44:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="addProductToCartAndEmailIt()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="addProductToCartAndEmailIt" duration-ms="42277" started-at="2018-04-18T13:44:43Z" finished-at="2018-04-18T13:45:25Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
+              <![CDATA[unknown error: call function result missing 'value'
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 172 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir832_3204}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 7ef4c0f5c15322175bdaad21f9b2be1c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: call function result missing 'value'
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 172 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir832_3204}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 7ef4c0f5c15322175bdaad21f9b2be1c
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:573)
+at com.build.qa.build.selenium.tests.BuildTest.addProductToCartAndEmailIt(BuildTest.java:252)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -93,40 +78,65 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartAndEmailIt -->
-        <test-method status="SKIP" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="tearDownAfter" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="2557" started-at="2018-04-18T13:45:25Z" finished-at="2018-04-18T13:45:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="SKIP" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="setUpBefore" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="16275" started-at="2018-04-18T13:45:28Z" finished-at="2018-04-18T13:45:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="SKIP" signature="addProductToCartFromCategoryDrop()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="addProductToCartFromCategoryDrop" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="1" started-at="2018-04-18T13:45:44Z" finished-at="2018-04-18T13:45:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="addProductToCartFromCategoryDrop()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="addProductToCartFromCategoryDrop" duration-ms="16605" started-at="2018-04-18T13:45:44Z" finished-at="2018-04-18T13:46:00Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
+              <![CDATA[element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 975 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14588_27795}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: b7ee5c1f50ee29f6ada6e2bbb8cf34a0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 975 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir14588_27795}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: b7ee5c1f50ee29f6ada6e2bbb8cf34a0
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+at com.build.qa.build.selenium.tests.BuildTest.addProductToCartFromCategoryDrop(BuildTest.java:180)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -144,40 +154,65 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartFromCategoryDrop -->
-        <test-method status="SKIP" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="tearDownAfter" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="1965" started-at="2018-04-18T13:46:00Z" finished-at="2018-04-18T13:46:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="SKIP" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="setUpBefore" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="9976" started-at="2018-04-18T13:46:02Z" finished-at="2018-04-18T13:46:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="SKIP" signature="facetNarrowBysResultInCorrectProductCounts()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="facetNarrowBysResultInCorrectProductCounts" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="1" started-at="2018-04-18T13:46:12Z" finished-at="2018-04-18T13:46:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="facetNarrowBysResultInCorrectProductCounts()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="facetNarrowBysResultInCorrectProductCounts" duration-ms="15448" started-at="2018-04-18T13:46:12Z" finished-at="2018-04-18T13:46:28Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
+              <![CDATA[element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 89 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir12620_31079}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 961a4a88ae412b98e6e1efcf8141e146]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 89 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir12620_31079}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 961a4a88ae412b98e6e1efcf8141e146
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+at com.build.qa.build.selenium.tests.BuildTest.facetNarrowBysResultInCorrectProductCounts(BuildTest.java:343)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -195,40 +230,65 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facetNarrowBysResultInCorrectProductCounts -->
-        <test-method status="SKIP" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="tearDownAfter" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="1614" started-at="2018-04-18T13:46:28Z" finished-at="2018-04-18T13:46:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="SKIP" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="setUpBefore" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="18801" started-at="2018-04-18T13:46:30Z" finished-at="2018-04-18T13:46:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="SKIP" signature="navigateToHomePage()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="navigateToHomePage" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:46:48Z" finished-at="2018-04-18T13:46:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="navigateToHomePage()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="navigateToHomePage" duration-ms="16953" started-at="2018-04-18T13:46:48Z" finished-at="2018-04-18T13:47:05Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
+              <![CDATA[element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.15 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15540_11278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: b6469760974265a5815a520f8df04b3e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.15 seconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15540_11278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: b6469760974265a5815a520f8df04b3e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+at com.build.qa.build.selenium.tests.BuildTest.navigateToHomePage(BuildTest.java:85)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -246,40 +306,65 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToHomePage -->
-        <test-method status="SKIP" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="tearDownAfter" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="2639" started-at="2018-04-18T13:47:05Z" finished-at="2018-04-18T13:47:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->
-        <test-method status="SKIP" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="setUpBefore" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="setUpBefore()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="setUpBefore" is-config="true" duration-ms="17964" started-at="2018-04-18T13:47:08Z" finished-at="2018-04-18T13:47:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBefore -->
-        <test-method status="SKIP" signature="searchForProductLandsOnCorrectProduct()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="searchForProductLandsOnCorrectProduct" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
-          <exception class="java.io.FileNotFoundException">
+        <test-method status="PASS" signature="beforeTests()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="beforeTests" is-config="true" duration-ms="0" started-at="2018-04-18T13:47:26Z" finished-at="2018-04-18T13:47:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTests -->
+        <test-method status="FAIL" signature="searchForProductLandsOnCorrectProduct()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="searchForProductLandsOnCorrectProduct" duration-ms="22257" started-at="2018-04-18T13:47:26Z" finished-at="2018-04-18T13:47:48Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[.\resources\conf\automation.properties (The system cannot find the path specified)]]>
+              <![CDATA[unknown error: call function result missing 'value'
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15960_18735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a73c418dce49006e5078c63a8d855739]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: .\resources\conf\automation.properties (The system cannot find the path specified)
-at java.io.FileInputStream.open0(Native Method)
-at java.io.FileInputStream.open(Unknown Source)
-at java.io.FileInputStream.<init>(Unknown Source)
-at com.build.qa.build.selenium.framework.BaseFramework.beforeClass(BaseFramework.java:60)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: call function result missing 'value'
+  (Session info: chrome with embedded Chromium 65.0.3325.181)
+  (Driver info: OperaDriver=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GLENNS-HP', ip: '192.168.1.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33 (3c26e9df3b0e313077a02a7d6ecab2264700bf10), userDataDir=C:\Users\Glenns\AppData\Local\Temp\scoped_dir15960_18735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a73c418dce49006e5078c63a8d855739
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+at com.build.qa.build.selenium.tests.BuildTest.searchForProductLandsOnCorrectProduct(BuildTest.java:132)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -297,11 +382,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForProductLandsOnCorrectProduct -->
-        <test-method status="SKIP" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@151f06e]" name="tearDownAfter" is-config="true" duration-ms="0" started-at="2018-03-22T11:08:59Z" finished-at="2018-03-22T11:08:59Z">
+        <test-method status="PASS" signature="tearDownAfter()[pri:0, instance:com.build.qa.build.selenium.tests.BuildTest@1a996b]" name="tearDownAfter" is-config="true" duration-ms="3533" started-at="2018-04-18T13:47:48Z" finished-at="2018-04-18T13:47:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfter -->

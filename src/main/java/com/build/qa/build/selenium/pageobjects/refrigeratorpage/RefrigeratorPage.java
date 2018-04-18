@@ -10,8 +10,8 @@ import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class RefrigeratorPage extends BasePage{
 	
-	private By finish;
-	private By type;
+	public By finish;
+	public By type;
 
 	public RefrigeratorPage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);

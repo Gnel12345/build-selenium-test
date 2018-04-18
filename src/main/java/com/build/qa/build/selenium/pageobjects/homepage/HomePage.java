@@ -12,14 +12,14 @@ import com.build.qa.build.selenium.pageobjects.BasePage;
 
 public class HomePage extends BasePage {
 	
-	private By buildThemeBody;
-	private By coupon;
-	private By search;
-	private By searchButton;
-	private By bathRooms;
-	private By refrigeration;
-	private By appliancesDropDown;
-	private By faucets;
+	public By buildThemeBody;
+	public By coupon;
+	public By search;
+	public By searchButton;
+	public By bathRooms;
+	public By refrigeration;
+	public By appliancesDropDown;
+	public By faucets;
 		
 	public HomePage(WebDriver driver, Wait<WebDriver> wait) {
 		super(driver, wait);

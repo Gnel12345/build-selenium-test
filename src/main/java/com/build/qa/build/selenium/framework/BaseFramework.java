@@ -2,11 +2,16 @@ package com.build.qa.build.selenium.framework;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+
 import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -15,6 +20,7 @@ import org.assertj.core.api.JUnitSoftAssertions;
 import org.junit.Rule;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +31,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -42,6 +49,7 @@ public abstract class BaseFramework {
 	private static final String DRIVER_CHROME = "chrome";
 	private static final String DRIVER_IE = "ie";
 	private static final String DRIVER_OPERA = "opera";
+	private static final String Android = "android";
 	
 	private static Properties configuration;
 
@@ -63,8 +71,8 @@ public abstract class BaseFramework {
 	}
 	
 	@BeforeMethod
-	@SuppressWarnings("deprecation")
-	public void setUpBefore()  {
+	@SuppressWarnings({ "deprecation", "rawtypes" })
+	public void setUpBefore() throws MalformedURLException  {
 		DesiredCapabilities capabilities;
 		// Which driver to use? 
 		if (DRIVER_CHROME.equalsIgnoreCase(configuration.getProperty("BROWSER"))){
@@ -98,6 +106,33 @@ public abstract class BaseFramework {
 						
 			driver = new OperaDriver(op);
 			
+		}if (Android.equalsIgnoreCase(configuration.getProperty("BROWSER"))){
+			// Create object of  DesiredCapabilities class and specify android platform
+			DesiredCapabilities androidCapabilities=DesiredCapabilities.android();
+			 
+			File file = new File("driver/chromedriver.exe");
+			 System.setProperty("webdriver.chrome.driver", file.getAbsolutePath()); 
+			// set the capability to execute test in chrome browser
+			androidCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,BrowserType.CHROME);
+			 
+			// set the capability to execute our test in Android Platform
+			androidCapabilities.setCapability(MobileCapabilityType.PLATFORM,Platform.ANDROID);
+			 
+			// we need to define platform name
+			androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
+			 
+			// Set the device name as well (you can give any name)
+			androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Demo");
+			 
+			 // set the android version as well 
+			androidCapabilities.setCapability(MobileCapabilityType.VERSION,"7.0");
+			 
+			 // Create object of URL class and specify the appium server address
+			 URL url= new URL("http://127.0.0.1:4723/wd/hub");
+			 
+			// Create object of  AndroidDriver class and pass the url and capability that we created
+			 driver = new AndroidDriver(url, androidCapabilities);
+			
 		}
 		
 		
@@ -124,11 +159,6 @@ public abstract class BaseFramework {
 		driver = null;
 	}
 	
-	public void getScreenshot(String result) throws IOException
-	{
-		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("./test-output/"+result+"screenshot.png"));
-		
-	}
+	
 	
 }
